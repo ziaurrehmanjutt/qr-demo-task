@@ -1,0 +1,8 @@
+{
+  "name": "QrDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "151ae73d"
+}
