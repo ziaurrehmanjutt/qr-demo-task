@@ -13,6 +13,7 @@ import {
   useIonViewWillEnter
 } from '@ionic/react';
 import './Home.css';
+import {stopScan} from "../helper";
 
 const Home: React.FC = () => {
 
@@ -29,11 +30,16 @@ const Home: React.FC = () => {
     }, 3000);
   };
 
+
+  document.addEventListener('ionBackButton', (event) => {
+    stopScan();
+  });
+
   return (
     <IonPage id="home-page">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Inbox</IonTitle>
+          <IonTitle>Barcode Scanner App</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -52,6 +58,10 @@ const Home: React.FC = () => {
         <IonList>
           {messages.map(m => <MessageListItem key={m.id} message={m} />)}
         </IonList>
+
+        <div>
+          Result: <span id="result"></span>
+        </div>
       </IonContent>
     </IonPage>
   );
