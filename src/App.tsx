@@ -30,7 +30,6 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Scanner from "./pages/Scanner";
 import history from "./helper/history";
 
 setupIonicReact();
@@ -47,10 +46,6 @@ const App: React.FC = () => (
                 {/* @ts-ignore */}
                 <Route path="/home" exact={true}>
                     <Home/>
-                </Route>
-                {/* @ts-ignore */}
-                <Route path="/scanner" exact={true}>
-                    <Scanner/>
                 </Route>
             </IonRouterOutlet>
         </IonReactRouter>
