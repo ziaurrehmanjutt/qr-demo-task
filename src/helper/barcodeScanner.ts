@@ -6,7 +6,7 @@ export const scanBarcode = async () => {
       const res = await CapacitorBarcodeScanner.scanBarcode({
         hint: CapacitorBarcodeScannerTypeHintALLOption.ALL,
         scanText: 'Scan Barcode',
-        scanButton: true,
+        scanButton: false,
       });
       return res.ScanResult; // Return the scanned barcode
     } catch (error) {
